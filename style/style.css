@@ -1,0 +1,170 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(222, 44%, 89%);
+    width: 1440px;
+}
+
+header {
+    height: 50px;
+}
+
+.attribution {
+    font-size: 9px;
+    text-align: right;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.comentario {
+    display: grid;
+    grid-template-columns: 60px 30px 120px 70px 220px;
+    grid-template-rows: 30px 50px 30px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: hsl(228, 33%, 97%);
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 300px;
+}
+
+.aval-pos {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(223, 19%, 93%);
+    margin: 15px 15px 0 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.saldo-aval {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(223, 19%, 93%);
+    font-size: 12px;
+    color: hsl(238, 40%, 52%);
+    font-weight: 700;
+    margin: 0 15px 0 15px;
+}
+
+.aval-neg {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(223, 19%, 93%);
+    margin: 0 15px 15px 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+.avatar {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.avatar img {
+    width: 70%;
+    margin: 10px 0;
+}
+
+.nome-usuario {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 14px;
+    color: hsl(212, 24%, 26%);
+    font-weight: 700;
+    margin: 10px 15px 0 0;
+}
+
+.tempo-post {
+    grid-area: 1 / 4 / 2 / 5;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 11px;
+    color: hsl(211, 10%, 45%);
+    font-weight: 500;
+    margin: 8px 15px 0 0;
+}
+
+.comandos {
+    grid-area: 1 / 5 / 2 / 6;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 11px;
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
+    margin: 8px 20px 0 0;
+}
+
+.comandos img {
+    margin: 5px;
+}
+
+.texto {
+    grid-area: 2 / 2 / 4 / 6;
+    display: flex;
+    justify-content: left;
+    font-size: 12px;
+    color: hsl(211, 10%, 45%);
+    font-weight: 500;
+    margin: 10px 10px 0 0;
+    line-height: 1.2;
+}
+
+.novo-comentario {
+    display: grid;
+    grid-template-columns: 60px 330px 110px;
+    grid-template-rows: 110px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: hsl(228, 33%, 97%);
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 300px;
+}
+
+.avatar-novo {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.avatar-novo img {
+    width: 50%;
+    margin: 20px 15px;
+}
+
+.texto-novo {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 20px 0;
+}
+
+.texto-novo textarea {
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: hsl(228, 33%, 97%);
+    resize: none;
+    border-color: hsl(211, 10%, 45%);
+    padding: 10px;
+    outline: 0;
+    overflow: hidden;
+}
+
+.button {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items:baseline ;
+    font-size: 11px;
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
+    margin: 30px 0 0 0;
+}

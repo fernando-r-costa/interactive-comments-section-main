@@ -1,26 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive comments section</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/style-mobile.css">
+
+  <title>Seção de comentários interativo</title>
+
 </head>
-<body>
 
-  <!-- Pull dynamic content from the data.json file -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body>
+  <header>
+    <div class="attribution">
+      Coded by <a href="https://www.linkedin.com/in/fernando-r-costa/">Fernando R Costa</a>.
+    </div>
+  </header>
+
+  <main>
+    <div class="comentario">
+      <div class="aval-pos"><img src="./images/icon-plus.svg"></div>
+      <div class="saldo-aval">12</div>
+      <div class="aval-neg"><img src="./images/icon-minus.svg"></div>
+      <div class="avatar"><img src="./images/avatars/image-amyrobson.png"></div>
+      <div class="nome-usuario">amyrobson</div>
+      <div class="tempo-post">1 mês</div>
+      <div class="comandos"><img src="./images/icon-reply.svg">Resposta</div>
+      <div class="texto">Impressionante! Embora pareça que o recurso de arrastar pode ser melhorado. Mas no geral parece incrível. Você acertou em cheio no design e a capacidade de resposta em vários pontos de interrupção funciona muito bem.</div>
+    </div>
+
+    <div class="novo-comentario">
+      <div class="avatar-novo"><img src="./images/avatars/image-amyrobson.png"></div>
+      <div class="texto-novo"><textarea placeholder="Adicione um comentário..."></textarea></div>
+      <div class="button"><button id="button">Enviar</button></div>
+    </div>
+
+  </main>
+
+  <!-- <script src="./script/script.js"></script> -->
 </body>
+
+
 </html>
