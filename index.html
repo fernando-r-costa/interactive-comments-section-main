@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./style/style.css">
   <link rel="stylesheet" href="./style/style-mobile.css">
   <link rel="stylesheet" href="./style/style-novo-comentario.css">
-  <link rel="stylesheet" href="./style/style-usuario-comentario.css">
+  <link rel="stylesheet" href="./style/style-modal.css">
 
   <title>Seção de comentários interativo</title>
 
@@ -37,7 +37,7 @@
       <div class="nome-usuario">amyrobson</div>
       <div class="confirma-usuario">você</div>
       <div class="tempo-post">1 mês</div>
-      <div class="delete"><img src="./images/icon-delete.svg">Delete</div>
+      <div class="delete"><img src="./images/icon-delete.svg">Apagar</div>
       <div class="comandos"><img src="./images/icon-reply.svg">Resposta</div>
       <div class="texto">Impressionante! Embora pareça que o recurso de arrastar pode ser melhorado. Mas no geral parece incrível. Você acertou em cheio no design e a capacidade de resposta em vários pontos de interrupção funciona muito bem.</div>
     </div>
@@ -46,6 +46,15 @@
       <div class="avatar-novo"><img src="./images/avatars/image-amyrobson.png"></div>
       <div class="texto-novo"><textarea placeholder="Adicione um comentário..."></textarea></div>
       <div class="button"><button id="button">Enviar</button></div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-conteudo">
+        <p class="pergunta-modal">Apagar comentário</p>
+        <p class="texto-modal">Você tem certeza que quer apagar esse comentário? Isso removerá seu comentário e não poderá ser desfeito.</p>
+        <button id="cancelar">Cancelar</button>
+        <button id="apagar">Apagar</button>
+      </div>
     </div>
 
 

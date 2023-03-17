@@ -33,7 +33,7 @@ Os usuários deverão ter a capacidade de:
 ## Meu processo
 
 - [x] Desktop-design
-- [ ] Desktop-modal
+- [x] Desktop-modal
 - [ ] Mobile-design
 - [ ] Mobile-modal
 - [ ] Estado-ativos
