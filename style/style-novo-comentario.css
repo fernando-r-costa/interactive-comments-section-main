@@ -1,0 +1,57 @@
+.novo-comentario {
+    display: grid;
+    grid-template-columns: 60px 330px 110px;
+    grid-template-rows: 110px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: hsl(228, 33%, 97%);
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 300px;
+}
+
+.avatar-novo {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.avatar-novo img {
+    width: 50%;
+    margin: 20px 15px;
+}
+
+.texto-novo {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 20px 0;
+}
+
+.texto-novo textarea {
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: hsl(228, 33%, 97%);
+    resize: none;
+    border-color: hsl(211, 10%, 45%);
+    padding: 10px;
+    outline: 0;
+    overflow: hidden;
+}
+
+.button {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items:baseline ;
+    margin: 30px 0 0 0;
+}
+
+.button button {
+    background-color: hsl(228, 45%, 44%);
+    border: none;
+    border-radius: 5px;
+    color: hsl(223, 19%, 93%);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 10px 15px;
+}

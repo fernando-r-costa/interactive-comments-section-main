@@ -19,7 +19,7 @@ header {
 
 .comentario {
     display: grid;
-    grid-template-columns: 60px 30px 120px 70px 220px;
+    grid-template-columns: 60px 30px 120px 37px 70px 85px 95px;
     grid-template-rows: 30px 50px 30px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -82,19 +82,46 @@ header {
     margin: 10px 15px 0 0;
 }
 
-.tempo-post {
+.confirma-usuario {
     grid-area: 1 / 4 / 2 / 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(228, 45%, 44%);
+    font-size: 12px;
+    color: hsl(223, 19%, 93%);
+    font-weight: 500;
+    margin: 10px 0 0 0;
+}
+
+.tempo-post {
+    grid-area: 1 / 5 / 2 / 6;
     display: flex;
     justify-content: left;
     align-items: center;
     font-size: 11px;
     color: hsl(211, 10%, 45%);
     font-weight: 500;
-    margin: 8px 15px 0 0;
+    margin: 10px 15px 0 10px;
+}
+
+.delete {
+    grid-area: 1 / 6 / 2 / 7;
+    display: none;
+    justify-content: right;
+    align-items: center;
+    font-size: 11px;
+    color: hsl(358, 79%, 66%);
+    font-weight: 500;
+    margin: 8px 20px 0 0;
+}
+
+.delete img {
+    margin: 5px;
 }
 
 .comandos {
-    grid-area: 1 / 5 / 2 / 6;
+    grid-area: 1 / 7 / 2 / 8;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -109,7 +136,7 @@ header {
 }
 
 .texto {
-    grid-area: 2 / 2 / 4 / 6;
+    grid-area: 2 / 2 / 4 / 8;
     display: flex;
     justify-content: left;
     font-size: 12px;
@@ -117,54 +144,4 @@ header {
     font-weight: 500;
     margin: 10px 10px 0 0;
     line-height: 1.2;
-}
-
-.novo-comentario {
-    display: grid;
-    grid-template-columns: 60px 330px 110px;
-    grid-template-rows: 110px;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    background-color: hsl(228, 33%, 97%);
-    width: 500px;
-    height: auto;
-    border-radius: 5px;
-    margin: 15px 300px;
-}
-
-.avatar-novo {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.avatar-novo img {
-    width: 50%;
-    margin: 20px 15px;
-}
-
-.texto-novo {
-    grid-area: 1 / 2 / 2 / 3;
-    margin: 20px 0;
-}
-
-.texto-novo textarea {
-    width: 310px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: hsl(228, 33%, 97%);
-    resize: none;
-    border-color: hsl(211, 10%, 45%);
-    padding: 10px;
-    outline: 0;
-    overflow: hidden;
-}
-
-.button {
-    grid-area: 1 / 3 / 2 / 4;
-    display: flex;
-    justify-content: center;
-    align-items:baseline ;
-    font-size: 11px;
-    color: hsl(238, 40%, 52%);
-    font-weight: 500;
-    margin: 30px 0 0 0;
 }

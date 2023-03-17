@@ -28,11 +28,11 @@ Os usuários deverão ter a capacidade de:
 
 ### Links
 
-- Site URL: [Seção de comentários](https://)
+- Site URL: [Seção de comentários](https://interactive-comments-section-three-black.vercel.app/)
 
 ## Meu processo
 
-- [90%] Desktop-design
+- [x] Desktop-design
 - [ ] Desktop-modal
 - [ ] Mobile-design
 - [ ] Mobile-modal
