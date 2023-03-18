@@ -62,6 +62,7 @@ header {
     border-radius: 0 0 10px 10px;
 }
 
+
 .avatar {
     grid-area: 1 / 2 / 2 / 3;
 }
@@ -144,4 +145,8 @@ header {
     font-weight: 500;
     margin: 10px 10px 0 0;
     line-height: 1.2;
+}
+
+.aval-neg, .aval-pos, .delete, .comandos:hover {
+    cursor: pointer;
 }
