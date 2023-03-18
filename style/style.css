@@ -1,7 +1,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     background-color: hsl(222, 44%, 89%);
-    width: 1440px;
+    max-width: 100vw;
 }
 
 header {
@@ -27,7 +27,7 @@ header {
     width: 500px;
     height: auto;
     border-radius: 5px;
-    margin: 15px 300px;
+    margin: 15px auto;
 }
 
 .aval-pos {
@@ -84,7 +84,7 @@ header {
 
 .confirma-usuario {
     grid-area: 1 / 4 / 2 / 5;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: hsl(228, 45%, 44%);
@@ -107,7 +107,7 @@ header {
 
 .delete {
     grid-area: 1 / 6 / 2 / 7;
-    display: none;
+    display: flex;
     justify-content: right;
     align-items: center;
     font-size: 11px;

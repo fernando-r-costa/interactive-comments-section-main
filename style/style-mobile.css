@@ -1,0 +1,75 @@
+@media screen and (max-width: 420px) {
+    body {
+        max-width: 100vw;
+    }
+
+    .comentario {
+        display: grid;
+        grid-template-columns: 50px 40px 60px 80px 100px;
+        grid-template-rows: 50px 90px 50px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 330px;
+        margin: 5px auto;
+    }
+
+    .avatar {
+        grid-area: 1 / 1 / 2 / 2;
+        margin: 10px;
+    }
+
+    .avatar img {
+        width: 100%;
+    }
+
+    .nome-usuario {
+        grid-area: 1 / 2 / 2 / 4;
+        margin: 20px 0 0 0;
+    }
+
+    .confirma-usuario {
+        grid-area: 1 / 4 / 2 / 5;
+        margin: 23px 15px 7px;
+    }
+
+    .tempo-post {
+        grid-area: 1 / 5 / 2 / 6;
+        margin: 15px 15px 0 10px;
+    }
+
+    .texto {
+        grid-area: 2 / 1 / 3 / 6;
+        margin: 15px 0 0 15px;
+
+    }
+
+    .aval-pos {
+        grid-area: 3 / 1 / 4 / 2;
+        justify-content: right;
+        margin: 10px 0 10px 30px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .saldo-aval {
+        grid-area: 3 / 2 / 4 / 3;
+        margin: 10px 0 10px 0;
+    }
+
+    .aval-neg {
+        grid-area: 3 / 3 / 4 / 4;
+        justify-content: left;
+        margin: 10px 40px 10px 0;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .delete {
+        grid-area: 3 / 4 / 4 / 5;
+        margin: 0 5px 0 0;
+    }
+
+    .comandos {
+        grid-area: 3 / 5 / 4 / 6;
+        margin: 0 15px 0 0;
+    }
+
+}

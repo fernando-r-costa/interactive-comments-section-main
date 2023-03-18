@@ -34,8 +34,8 @@ Os usuários deverão ter a capacidade de:
 
 - [x] Desktop-design
 - [x] Desktop-modal
-- [ ] Mobile-design
-- [ ] Mobile-modal
+- [x] Mobile-design
+- [x] Mobile-modal
 - [ ] Estado-ativos
 - [ ] Interação-postar
 - [ ] Interação-responder
