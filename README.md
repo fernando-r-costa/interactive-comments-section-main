@@ -37,6 +37,7 @@ Os usuários deverão ter a capacidade de:
 - [x] Mobile-design
 - [x] Mobile-modal
 - [x] Estado-ativos
+- [50%] Buscar-dados
 - [ ] Interação-postar
 - [ ] Interação-responder
 - [ ] Interação-positivo-negativo

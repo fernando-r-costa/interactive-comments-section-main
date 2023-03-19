@@ -85,7 +85,7 @@ header {
 
 .confirma-usuario {
     grid-area: 1 / 4 / 2 / 5;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: hsl(228, 45%, 44%);
@@ -108,7 +108,7 @@ header {
 
 .delete {
     grid-area: 1 / 6 / 2 / 7;
-    display: flex;
+    display: none;
     justify-content: right;
     align-items: center;
     font-size: 11px;
