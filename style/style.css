@@ -17,7 +17,7 @@ header {
     color: hsl(228, 45%, 44%);
 }
 
-.comentario {
+.comentario, .resposta {
     display: grid;
     grid-template-columns: 60px 30px 120px 37px 70px 85px 95px;
     grid-template-rows: 30px 50px 30px;
@@ -28,6 +28,13 @@ header {
     height: auto;
     border-radius: 5px;
     margin: 15px auto;
+}
+
+.resposta {
+    grid-template-columns: 60px 30px 100px 37px 60px 70px 90px;
+    grid-template-rows: 30px 50px 30px;
+    margin-left: calc(((100vw - 500px)/2) + 50px);
+    width: 442px;
 }
 
 .aval-pos {

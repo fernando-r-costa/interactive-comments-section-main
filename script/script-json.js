@@ -8,4 +8,5 @@ request.send();
 request.onload = function() {
     dados = request.response;
     console.log(dados);
+    mostraComentarios(dados);
 }
