@@ -1,8 +1,7 @@
 let main = document.querySelector("main");
 
-
 function mostraComentarios(dados) {
-
+    
     for (var i = 0; i < dados.comments.length; i++) {
         let comentario = document.createElement("div");
         let avalPos = document.createElement("div");
@@ -15,7 +14,7 @@ function mostraComentarios(dados) {
         let apagar = document.createElement("div");
         let comandos = document.createElement("div");
         let texto = document.createElement("div");
-
+        
         comentario.classList.add("comentario");
         avalPos.classList.add("aval-pos");
         saldoAval.classList.add("saldo-aval");
@@ -26,8 +25,9 @@ function mostraComentarios(dados) {
         tempoPost.classList.add("tempo-post");
         apagar.classList.add("delete");
         comandos.classList.add("comandos");
+        comandos.setAttribute("id", "comandos");
         texto.classList.add("texto");
-
+        
         avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
         saldoAval.innerText = dados.comments[i].score;
         avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
@@ -38,7 +38,7 @@ function mostraComentarios(dados) {
         apagar.innerText = "Apagar";
         comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
         texto.innerText = dados.comments[i].content;
-
+        
         comentario.appendChild(avalPos);
         comentario.appendChild(saldoAval);
         comentario.appendChild(avalNeg);
@@ -49,9 +49,9 @@ function mostraComentarios(dados) {
         comentario.appendChild(apagar);
         comentario.appendChild(comandos);
         comentario.appendChild(texto);
-
+        
         main.appendChild(comentario);
-
+        
         for (var j = 0; j < dados.comments[i].replies.length; j++) {
             let comentario = document.createElement("div");
             let avalPos = document.createElement("div");
@@ -64,7 +64,7 @@ function mostraComentarios(dados) {
             let apagar = document.createElement("div");
             let comandos = document.createElement("div");
             let texto = document.createElement("div");
-
+            
             comentario.classList.add("resposta");
             avalPos.classList.add("aval-pos");
             saldoAval.classList.add("saldo-aval");
@@ -75,8 +75,9 @@ function mostraComentarios(dados) {
             tempoPost.classList.add("tempo-post");
             apagar.classList.add("delete");
             comandos.classList.add("comandos");
+            comandos.setAttribute("id", "comandos");
             texto.classList.add("texto");
-
+            
             avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
             saldoAval.innerText = dados.comments[i].replies[j].score;
             avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
@@ -98,9 +99,39 @@ function mostraComentarios(dados) {
             comentario.appendChild(apagar);
             comentario.appendChild(comandos);
             comentario.appendChild(texto);
-
+            
             main.appendChild(comentario);
         }
-
     }
+}
+
+function mostraNovoComentario() {
+    
+    let novoComentario = document.createElement("div");
+    let novoAvatar = document.createElement("div");
+    let novoTexto = document.createElement("div");
+    let button = document.createElement("div");
+    
+    novoComentario.classList.add("novo-comentario");
+    novoAvatar.classList.add("avatar-novo");
+    novoTexto.classList.add("texto-novo");
+    button.classList.add("button");
+    
+    novoAvatar.innerHTML = `<img src="./images/avatars/image-${dados.currentUser.username}.png">`;
+    novoTexto.innerHTML = "<textarea placeholder='Adicione um comentário...'></textarea>";
+    button.innerHTML = "<button id='button'>Enviar</button>";
+    
+    novoComentario.appendChild(novoAvatar);
+    novoComentario.appendChild(novoTexto);
+    novoComentario.appendChild(button);
+
+    main.appendChild(novoComentario);
+}
+
+function mostraModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+function fechaModal() {
+    document.getElementById("modal").style.display = "none";
 }

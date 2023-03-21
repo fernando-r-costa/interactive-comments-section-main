@@ -10,7 +10,17 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         width: 330px;
-        margin: 5px auto;
+        margin: 5px auto 5px calc(((100vw - 330px)/2));
+    }
+
+    .resposta {
+        display: grid;
+        grid-template-columns: 50px 40px 60px 70px 90px;
+        grid-template-rows: 50px 90px 50px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: calc(330px - 20px);
+        margin: 5px auto 5px calc(((100vw - 330px)/2) + 20px);
     }
 
     .avatar {
@@ -39,8 +49,8 @@
 
     .texto {
         grid-area: 2 / 1 / 3 / 6;
-        margin: 15px 0 0 15px;
-
+        margin: 10px 5px 0 15px;
+        font-size: 11.5px;
     }
 
     .aval-pos {
