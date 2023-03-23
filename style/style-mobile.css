@@ -13,7 +13,7 @@
         margin: 5px auto 5px calc(((100vw - 330px)/2));
     }
 
-    .resposta {
+    .comentario resposta {
         display: grid;
         grid-template-columns: 50px 40px 60px 70px 90px;
         grid-template-rows: 50px 90px 50px;
