@@ -1,5 +1,5 @@
 .novo-comentario {
-    display: grid;
+    display: none;
     grid-template-columns: 60px 330px 110px;
     grid-template-rows: 110px;
     grid-column-gap: 0px;
@@ -8,7 +8,7 @@
     width: 500px;
     height: auto;
     border-radius: 5px;
-    margin: 15px auto 15px calc(((100vw - 500px)/2));
+    margin: 15px auto;
 }
 
 .avatar-novo {
@@ -79,7 +79,7 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         width: 330px;
-        margin: 5px auto 5px calc(((100vw - 330px)/2));
+        margin: 15px auto;
     }
 
     .texto-novo {

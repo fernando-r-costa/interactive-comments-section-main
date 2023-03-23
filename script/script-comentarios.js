@@ -1,138 +1,106 @@
 let main = document.querySelector("main");
 
-let comentario = "";
-
-let classHtml = ['aval-pos', 'saldo-aval', 'aval-neg', 'avatar', 'nome-usuario', 'confirma-usuario', 'tempo-post', 'delete', 'comandos', 'texto'];
-
-let classJs = ['avalPos', 'saldoAval', 'avalNeg', 'avatar', 'nomeUsuario', 'confirmaUsuario', 'tempoPost', 'apagar', 'comandos', 'texto'];
-
-function montaComentario() {
-    
-    comentario = document.createElement("div");
-    comentario.classList.add("comentario");
-    main.appendChild(comentario);
-    for (var h = 0; h < classJs.length; h++) {
-        classJs[h] = document.createElement("div");
-        classJs[h].classList.add(`${classHtml[h]}`);
-        comentario.appendChild(classJs[h]);
-        console.log(comentario);
-        console.log(classJs[h]);
-    }    
-    
-    
-    // let classe = "";
-    // classJs.forEach(myFunction);
-        
-    // function myFunction(classJs) {
-    // }
-    
-    // avalPos = document.createElement("div");
-    // avalPos.classList.add("aval-pos");
-    // comentario.appendChild(avalPos);
-
-    // saldoAval = document.createElement("div");
-    // saldoAval.classList.add("saldo-aval");
-    // comentario.appendChild(saldoAval);
-
-    // avalNeg = document.createElement("div");
-    // avalNeg.classList.add("aval-neg");
-    // comentario.appendChild(avalNeg);
-
-    // avatar = document.createElement("div");
-    // avatar.classList.add("avatar");
-    // comentario.appendChild(avatar);
-
-    // nomeUsuario = document.createElement("div");
-    // nomeUsuario.classList.add("nome-usuario");
-    // comentario.appendChild(nomeUsuario);
-
-    // confirmaUsuario = document.createElement("div");
-    // confirmaUsuario.classList.add("confirma-usuario");
-    // comentario.appendChild(confirmaUsuario);
-
-    // tempoPost = document.createElement("div");
-    // tempoPost.classList.add("tempo-post");
-    // comentario.appendChild(tempoPost);
-
-    // apagar = document.createElement("div");
-    // apagar.classList.add("delete");
-    // comentario.appendChild(apagar);
-
-    // comandos = document.createElement("div");
-    // comandos.classList.add("comandos");
-    // comentario.appendChild(comandos);
-
-    // texto = document.createElement("div");
-    // texto.classList.add("texto");
-    // comentario.appendChild(texto);
-    
-    
-    // comandos.setAttribute("id", "comandos");
-    
-    document.querySelector(".aval-pos").innerHTML = "<img src='./images/icon-plus.svg'>";
-    document.querySelector(".aval-neg").innerHTML = "<img src='./images/icon-minus.svg'>";
-    document.querySelector(".confirma-usuario").innerText = "você";
-    apagar.innerText = "Apagar";
-    document.querySelector(".comandos").innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
-    
-    
-}
-
 
 function mostraComentarios(dados) {
-    for (var i = 0; i < dados.comments.length; i++) {
-        
-        montaComentario();
-        
-        document.querySelector(".comentario").classList.add("comentario");
-        document.querySelector(".saldo-aval").innerText = dados.comments[i].score;
-        document.querySelector(".avatar").innerHTML = `<img src="./images/avatars/image-${dados.comments[i].user.username}.png">`;
-        document.querySelector(".nome-usuario").innerText = dados.comments[i].user.username;
-        document.querySelector(".tempo-post").innerText = dados.comments[i].createdAt;
-        document.querySelector(".texto").innerText = dados.comments[i].content;
 
+    for (var i = 0; i < dados.comments.length; i++) {
+        let comentario = document.createElement("div");
+        let avalPos = document.createElement("div");
+        let saldoAval = document.createElement("div");
+        let avalNeg = document.createElement("div");
+        let avatar = document.createElement("div");
+        let nomeUsuario = document.createElement("div");
+        let confirmaUsuario = document.createElement("div");
+        let tempoPost = document.createElement("div");
+        let apagar = document.createElement("div");
+        let comandos = document.createElement("div");
+        let texto = document.createElement("div");
+
+        comentario.classList.add("comentario");
+        avalPos.classList.add("aval-pos");
+        saldoAval.classList.add("saldo-aval");
+        avalNeg.classList.add("aval-neg");
+        avatar.classList.add("avatar");
+        nomeUsuario.classList.add("nome-usuario");
+        confirmaUsuario.classList.add("confirma-usuario");
+        tempoPost.classList.add("tempo-post");
+        apagar.classList.add("delete");
+        comandos.classList.add("comandos");
+        texto.classList.add("texto");
+
+        avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
+        saldoAval.innerText = dados.comments[i].score;
+        avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
+        avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].user.username}.png">`;
+        nomeUsuario.innerText = dados.comments[i].user.username;
+        confirmaUsuario.innerText = "você";
+        tempoPost.innerText = dados.comments[i].createdAt;
+        apagar.innerText = "Apagar";
+        comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
+        texto.innerText = dados.comments[i].content;
+
+        comentario.appendChild(avalPos);
+        comentario.appendChild(saldoAval);
+        comentario.appendChild(avalNeg);
+        comentario.appendChild(avatar);
+        comentario.appendChild(nomeUsuario);
+        comentario.appendChild(confirmaUsuario);
+        comentario.appendChild(tempoPost);
+        comentario.appendChild(apagar);
+        comentario.appendChild(comandos);
+        comentario.appendChild(texto);
+
+        main.appendChild(comentario);
 
         for (var j = 0; j < dados.comments[i].replies.length; j++) {
-            montaComentario();
+            let comentario = document.createElement("div");
+            let avalPos = document.createElement("div");
+            let saldoAval = document.createElement("div");
+            let avalNeg = document.createElement("div");
+            let avatar = document.createElement("div");
+            let nomeUsuario = document.createElement("div");
+            let confirmaUsuario = document.createElement("div");
+            let tempoPost = document.createElement("div");
+            let apagar = document.createElement("div");
+            let comandos = document.createElement("div");
+            let texto = document.createElement("div");
 
-            comentario.classList.remove("comentario");
             comentario.classList.add("resposta");
-            document.querySelector(".saldo-aval").innerText = dados.comments[i].replies[j].score;
-            document.querySelector(".avatar").innerHTML = `<img src="./images/avatars/image-${dados.comments[i].replies[j].user.username}.png">`;
-            document.querySelector(".nome-usuario").innerText = dados.comments[i].replies[j].user.username;
-            document.querySelector(".tempo-post").innerText = dados.comments[i].replies[j].createdAt;
-            document.querySelector(".texto").innerText = dados.comments[i].replies[j].content;
+            avalPos.classList.add("aval-pos");
+            saldoAval.classList.add("saldo-aval");
+            avalNeg.classList.add("aval-neg");
+            avatar.classList.add("avatar");
+            nomeUsuario.classList.add("nome-usuario");
+            confirmaUsuario.classList.add("confirma-usuario");
+            tempoPost.classList.add("tempo-post");
+            apagar.classList.add("delete");
+            comandos.classList.add("comandos");
+            texto.classList.add("texto");
+
+            avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
+            saldoAval.innerText = dados.comments[i].replies[j].score;
+            avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
+            avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].replies[j].user.username}.png">`;
+            nomeUsuario.innerText = dados.comments[i].replies[j].user.username;
+            confirmaUsuario.innerText = "você";
+            tempoPost.innerText = dados.comments[i].replies[j].createdAt;
+            apagar.innerText = "Apagar";
+            comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
+            texto.innerText = dados.comments[i].replies[j].content;
+
+            comentario.appendChild(avalPos);
+            comentario.appendChild(saldoAval);
+            comentario.appendChild(avalNeg);
+            comentario.appendChild(avatar);
+            comentario.appendChild(nomeUsuario);
+            comentario.appendChild(confirmaUsuario);
+            comentario.appendChild(tempoPost);
+            comentario.appendChild(apagar);
+            comentario.appendChild(comandos);
+            comentario.appendChild(texto);
+
+            main.appendChild(comentario);
         }
+
     }
-}
-
-function mostraNovoComentario() {
-
-    let novoComentario = document.createElement("div");
-    let novoAvatar = document.createElement("div");
-    let novoTexto = document.createElement("div");
-    let button = document.createElement("div");
-
-    novoComentario.classList.add("novo-comentario");
-    novoAvatar.classList.add("avatar-novo");
-    novoTexto.classList.add("texto-novo");
-    button.classList.add("button");
-
-    novoAvatar.innerHTML = `<img src="./images/avatars/image-${dados.currentUser.username}.png">`;
-    novoTexto.innerHTML = "<textarea placeholder='Adicione um comentário...'></textarea>";
-    button.innerHTML = "<button id='button'>Enviar</button>";
-
-    novoComentario.appendChild(novoAvatar);
-    novoComentario.appendChild(novoTexto);
-    novoComentario.appendChild(button);
-
-    main.appendChild(novoComentario);
-}
-
-function mostraModal() {
-    document.getElementById("modal").style.display = "block";
-}
-
-function fechaModal() {
-    document.getElementById("modal").style.display = "none";
 }

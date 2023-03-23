@@ -22,19 +22,9 @@ Os usuários deverão ter a capacidade de:
 - **Bônus**: Se construir um projeto puramente front-end, usar `localStorage` para salvar o estado atual no navegador que persiste quando o navegador é atualizado.
 - **Bônus**: Em vez de usar as strings `createdAt` do arquivo `data.json`, tentar usar timestamps e rastrear dinamicamente o tempo desde que o comentário ou resposta foi postado.
 
-### Screenshots
+### Screenshot
 
-![](./screenshots/screenshot-1679410763953.jpeg)
-
-![](./screenshots/screenshot-1679410772341.jpeg)
-
-![](./screenshots/screenshot-1679411089923.jpeg)
-
-![](./screenshots/screenshot-1679411094520.jpeg)
-
-![](./screenshots/screenshot-1679411127849.jpeg)
-
-![](./screenshots/screenshot-1679411131803.jpeg)
+![](./design/desktop-preview.jpg)
 
 ### Links
 
@@ -42,15 +32,12 @@ Os usuários deverão ter a capacidade de:
 
 ## Meu processo
 
-- Parte 1 Front-End:
 - [x] Desktop-design
 - [x] Desktop-modal
 - [x] Mobile-design
 - [x] Mobile-modal
 - [x] Estado-ativos
 - [x] Buscar-dados
-
-- Parte 2 Fullstack:
 - [ ] Interação-postar
 - [ ] Interação-responder
 - [ ] Interação-positivo-negativo
