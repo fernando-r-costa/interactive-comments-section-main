@@ -32,12 +32,15 @@ Os usuários deverão ter a capacidade de:
 
 ## Meu processo
 
+- Parte 1 Frontend
 - [x] Desktop-design
 - [x] Desktop-modal
 - [x] Mobile-design
 - [x] Mobile-modal
 - [x] Estado-ativos
 - [x] Buscar-dados
+
+- Parte 2 Fullstack
 - [ ] Interação-postar
 - [ ] Interação-responder
 - [ ] Interação-positivo-negativo

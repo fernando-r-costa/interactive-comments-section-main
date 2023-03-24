@@ -1,5 +1,5 @@
 .novo-comentario {
-    display: none;
+    display: grid;
     grid-template-columns: 60px 330px 110px;
     grid-template-rows: 110px;
     grid-column-gap: 0px;

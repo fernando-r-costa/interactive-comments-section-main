@@ -10,7 +10,6 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         width: 330px;
-<<<<<<< HEAD
         margin: 5px auto 5px calc(((100vw - 330px)/2));
     }
 
@@ -22,9 +21,6 @@
         grid-row-gap: 0px;
         width: calc(330px - 20px);
         margin: 5px auto 5px calc(((100vw - 330px)/2) + 20px);
-=======
-        margin: 5px auto;
->>>>>>> parent of b1c2645 (Fim parte 1 front-end)
     }
 
     .avatar {
