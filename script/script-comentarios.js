@@ -1,6 +1,5 @@
 let main = document.querySelector("main");
 
-
 function mostraComentarios(dados) {
 
     for (var i = 0; i < dados.comments.length; i++) {
@@ -103,29 +102,6 @@ function mostraComentarios(dados) {
         }
 
     }
-}
-
-function mostraNovoComentario() {
-
-    let novoComentario = document.createElement("div");
-    let novoAvatar = document.createElement("div");
-    let novoTexto = document.createElement("div");
-    let button = document.createElement("div");
-
-    novoComentario.classList.add("novo-comentario");
-    novoAvatar.classList.add("avatar-novo");
-    novoTexto.classList.add("texto-novo");
-    button.classList.add("button");
-
-    novoAvatar.innerHTML = `<img src="./images/avatars/image-${dados.currentUser.username}.png">`;
-    novoTexto.innerHTML = "<textarea placeholder='Adicione um comentário...'></textarea>";
-    button.innerHTML = "<button id='button'>Enviar</button>";
-
-    novoComentario.appendChild(novoAvatar);
-    novoComentario.appendChild(novoTexto);
-    novoComentario.appendChild(button);
-
-    main.appendChild(novoComentario);
 }
 
 function mostraModal() {

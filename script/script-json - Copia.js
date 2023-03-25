@@ -12,13 +12,4 @@ request.onload = function() {
     mostraNovoComentario();
 }
 
-class Comments {
-    constructor(id, content, createdAt, score, user, replies){
-        this.id = id
-        this.content = content
-        this.createdAt = createdAt
-        this.score = score
-        this.user = user
-        this.replies = replies
-    }
-}
+// let textoNovoComentario = document.getElementById("texto-novo");

@@ -41,9 +41,10 @@ Os usuários deverão ter a capacidade de:
 - [x] Buscar-dados
 
 - Parte 2 Fullstack
-- [ ] Interação-postar
+- [x] Interação-postar
 - [ ] Interação-responder
 - [ ] Interação-positivo-negativo
+- [ ] Interação-usuario
 - [ ] Interação-editar
 - [ ] Interação-deletar
 
