@@ -104,10 +104,3 @@ function mostraComentarios(dados) {
     }
 }
 
-function mostraModal() {
-    document.querySelector(".modal").style.display = "block";
-}
-
-function fechaModal() {
-    document.querySelector(".modal").style.display = "none";
-}

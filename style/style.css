@@ -17,7 +17,7 @@ header {
     color: hsl(228, 45%, 44%);
 }
 
-.comentario, .resposta {
+.comentario {
     display: grid;
     grid-template-columns: 60px 30px 120px 37px 70px 85px 95px;
     grid-template-rows: 30px 50px 30px;
@@ -31,10 +31,16 @@ header {
 }
 
 .resposta {
+    display: grid;
     grid-template-columns: 60px 30px 100px 37px 60px 70px 90px;
     grid-template-rows: 30px 50px 30px;
-    margin-left: calc(((100vw - 500px)/2) + 50px);
-    width: 442px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: hsl(228, 33%, 97%);
+    height: auto;
+    border-radius: 5px;
+    width: calc(500px - 50px);
+    margin: 15px auto 15px calc(((100vw - 500px)/2) + 50px);
 }
 
 .aval-pos {
@@ -154,6 +160,9 @@ header {
     line-height: 1.2;
 }
 
-.aval-neg, .aval-pos, .delete, .comandos:hover {
+.aval-neg,
+.aval-pos,
+.delete,
+.comandos:hover {
     cursor: pointer;
 }
