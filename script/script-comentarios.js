@@ -25,6 +25,7 @@ function mostraComentarios(dados) {
         tempoPost.classList.add("tempo-post");
         apagar.classList.add("delete");
         comandos.classList.add("comandos");
+        comandos.setAttribute("onclick", "anexo = parentNode; mostraNovoComentario()");
         texto.classList.add("texto");
 
         avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
@@ -74,6 +75,7 @@ function mostraComentarios(dados) {
             tempoPost.classList.add("tempo-post");
             apagar.classList.add("delete");
             comandos.classList.add("comandos");
+            comandos.setAttribute("onclick", "anexo = parentNode; mostraNovoComentario()");
             texto.classList.add("texto");
 
             avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";

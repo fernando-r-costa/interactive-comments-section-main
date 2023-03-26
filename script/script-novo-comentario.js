@@ -1,3 +1,5 @@
+let anexo = main;
+
 function mostraNovoComentario() {
 
     let novoComentario = document.createElement("div");
@@ -19,7 +21,7 @@ function mostraNovoComentario() {
     novoComentario.appendChild(novoTexto);
     novoComentario.appendChild(button);
 
-    main.appendChild(novoComentario);
+    anexo.after(novoComentario);
 
 }
 
@@ -87,5 +89,4 @@ function insereNovoComentario() {
 
         textoNovoComentario.value = "";
     }
-
 }
