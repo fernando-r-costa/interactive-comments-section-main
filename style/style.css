@@ -163,6 +163,16 @@ header {
 .aval-neg,
 .aval-pos,
 .delete,
-.comandos:hover {
+.comandos,
+.link-novo-comentario:hover {
     cursor: pointer;
+}
+
+
+.link-novo-comentario {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 25vw;
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
 }

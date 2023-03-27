@@ -43,7 +43,7 @@ Os usuários deverão ter a capacidade de:
 - Parte 2 Fullstack
 - [x] Interação-postar
 - [x] Interação-erro-comentario
-- [50%] Interação-responder
+- [x] Interação-responder
 - [ ] Interação-positivo-negativo
 - [ ] Interação-usuario
 - [ ] Interação-editar

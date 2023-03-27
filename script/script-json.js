@@ -9,7 +9,7 @@ request.onload = function() {
     dados = request.response;
     console.log(dados);
     mostraComentarios(dados);
-    mostraNovoComentario();
+    // mostraNovoComentario();
 }
 
 class Comments {

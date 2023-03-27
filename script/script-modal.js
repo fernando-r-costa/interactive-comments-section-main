@@ -28,7 +28,7 @@ function montaModal() {
     modalConteudo.appendChild(botao1);
     modalConteudo.appendChild(textoModal);
 
-    if (textoBotao2 != 0) {
+    if (textoBotao2 != "") {
         let botao2 = document.createElement("button");
         botao2.setAttribute("id", "botao2");
         botao2.innerText = textoBotao2

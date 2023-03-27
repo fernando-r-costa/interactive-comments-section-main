@@ -22,13 +22,26 @@ function mostraNovoComentario() {
     novoComentario.appendChild(button);
 
     anexo.after(novoComentario);
-
+    
+    if(anexo == main) {
+        window.scrollBy({
+           top: window.innerHeight,
+           left: 0,
+           behavior: "smooth",
+        });
+    } else { 
+        window.scrollBy({
+            top: 100,
+            left: 0,
+            behavior: "smooth",
+         });
+    }
 }
 
 function insereNovoComentario() {
     textoNovoComentario = document.getElementById("texto-novo");
 
-    if (textoNovoComentario.value == 0) {
+    if (textoNovoComentario.value == "") {
         textoPergModal = "Comentário vazio!";
         textoTextoModal = "Não é possível adicionar comentário vazio.";
         textoBotao1 = "Voltar";
@@ -51,7 +64,11 @@ function insereNovoComentario() {
         let comandos = document.createElement("div");
         let texto = document.createElement("div");
 
-        comentario.classList.add("comentario");
+        if(anexo == main) {
+            comentario.classList.add("comentario");
+        } else {
+            comentario.classList.add("resposta");
+        }
         avalPos.classList.add("aval-pos");
         saldoAval.classList.add("saldo-aval");
         avalNeg.classList.add("aval-neg");
@@ -61,6 +78,7 @@ function insereNovoComentario() {
         tempoPost.classList.add("tempo-post");
         apagar.classList.add("delete");
         comandos.classList.add("comandos");
+        comandos.setAttribute("onclick", "anexo = parentNode; mostraNovoComentario()");
         texto.classList.add("texto");
 
         avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
@@ -85,8 +103,20 @@ function insereNovoComentario() {
         comentario.appendChild(comandos);
         comentario.appendChild(texto);
 
-        main.insertBefore(comentario, main.childNodes[main.childNodes.length - 1]);
+        // main.insertBefore(comentario, main.childNodes[main.childNodes.length - 1]);
+        if(anexo == main) {
+            anexo.appendChild(comentario);
+        } else {
+            anexo.after(comentario);
+        }
 
         textoNovoComentario.value = "";
+
+        fechaNovoComentario();
     }
+}
+
+function fechaNovoComentario() {
+    const novoComentario = document.querySelector(".novo-comentario");
+    novoComentario.remove();
 }
