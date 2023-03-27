@@ -1,4 +1,5 @@
 let main = document.querySelector("main");
+let saldoAvaliacao = [];
 
 function mostraComentarios(dados) {
     let linkNovoComentario = document.createElement("div");
@@ -6,6 +7,7 @@ function mostraComentarios(dados) {
     linkNovoComentario.setAttribute("onclick", "mostraNovoComentario()");
     linkNovoComentario.innerHTML = "Inserir novo comentário";
     main.appendChild(linkNovoComentario);
+    
     
     for (var i = 0; i < dados.comments.length; i++) {
         let comentario = document.createElement("div");
@@ -19,9 +21,11 @@ function mostraComentarios(dados) {
         let apagar = document.createElement("div");
         let comandos = document.createElement("div");
         let texto = document.createElement("div");
+        saldoAvaliacao[i] = dados.comments[i].score;        
         
         comentario.classList.add("comentario");
         avalPos.classList.add("aval-pos");
+        avalPos.setAttribute("onclick", "score = nextSibling; alteraScore()");
         saldoAval.classList.add("saldo-aval");
         avalNeg.classList.add("aval-neg");
         avatar.classList.add("avatar");
@@ -34,7 +38,7 @@ function mostraComentarios(dados) {
         texto.classList.add("texto");
         
         avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
-        saldoAval.innerText = dados.comments[i].score;
+        saldoAval.innerText = saldoAvaliacao[i];
         avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
         avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].user.username}.png">`;
         nomeUsuario.innerText = dados.comments[i].user.username;
@@ -72,6 +76,7 @@ function mostraComentarios(dados) {
             
             comentario.classList.add("resposta");
             avalPos.classList.add("aval-pos");
+            avalPos.setAttribute("onclick", "score = nextSibling; alteraScore()");
             saldoAval.classList.add("saldo-aval");
             avalNeg.classList.add("aval-neg");
             avatar.classList.add("avatar");

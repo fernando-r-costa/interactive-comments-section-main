@@ -48,7 +48,7 @@ function insereNovoComentario() {
         textoBotao2 = "";
         montaModal()
     } else {
-        let novoComment = new Comments(dados.comments.length + 1, `${textoNovoComentario.value}`, `1 dia`, 0, dados.currentUser, [])
+        let novoComment = new Comments(dados.comments.length + 1, `${textoNovoComentario.value}`, `Hoje`, 0, dados.currentUser, [])
 
         dados.comments[dados.comments.length] = novoComment
 
@@ -103,7 +103,6 @@ function insereNovoComentario() {
         comentario.appendChild(comandos);
         comentario.appendChild(texto);
 
-        // main.insertBefore(comentario, main.childNodes[main.childNodes.length - 1]);
         if(anexo == main) {
             anexo.appendChild(comentario);
         } else {

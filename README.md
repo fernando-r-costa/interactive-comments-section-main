@@ -44,7 +44,7 @@ Os usuários deverão ter a capacidade de:
 - [x] Interação-postar
 - [x] Interação-erro-comentario
 - [x] Interação-responder
-- [ ] Interação-positivo-negativo
+- [50%] Interação-positivo-negativo
 - [ ] Interação-usuario
 - [ ] Interação-editar
 - [ ] Interação-deletar
