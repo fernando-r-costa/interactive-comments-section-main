@@ -91,6 +91,7 @@ function insereNovoComentario() {
         confirmaUsuario.innerHTML = "<p>você</p>";
         tempoPost.innerText = novoComment.createdAt;
         apagar.innerText = "Apagar";
+        apagar.setAttribute("onclick", "elementoPai = parentNode; apagar()")
         comandos.innerHTML = "<img src='./images/icon-edit.svg'>Editar";
         texto.innerText = novoComment.content;
 

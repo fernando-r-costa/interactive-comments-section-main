@@ -47,6 +47,7 @@ function mostraComentarios(dados) {
         if(dados.comments[i].user.username == dados.currentUser.username) {
             confirmaUsuario.innerHTML = "<p>você</p>";
             apagar.innerHTML = "<p>Apagar</p>";
+            apagar.setAttribute("onclick", "elementoPai = parentNode; apagar()")
             comandos.innerHTML = "<img src='./images/icon-edit.svg'>Editar";
             comandos.setAttribute("onclick", "elementoVizinho = nextSibling; editarComentario()");
         } else {
@@ -91,6 +92,7 @@ function mostraComentarios(dados) {
             confirmaUsuario.classList.add("confirma-usuario");
             tempoPost.classList.add("tempo-post");
             apagar.classList.add("delete");
+            apagar.setAttribute("onclick", "elementoPai = parentNode; apagar()")
             comandos.classList.add("comandos");
             comandos.setAttribute("onclick", "anexo = parentNode; mostraNovoComentario()");
             texto.classList.add("texto");

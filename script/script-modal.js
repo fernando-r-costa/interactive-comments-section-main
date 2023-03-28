@@ -30,7 +30,13 @@ function montaModal() {
     modalConteudo.appendChild(botao1);
     modalConteudo.appendChild(textoModal);
 
-    if (textoBotao2 != "") {
+    if (textoBotao2 == "Apagar") {
+        let botao2 = document.createElement("button");
+        botao2.setAttribute("id", "botao2");
+        botao2.innerText = textoBotao2
+        modalConteudo.appendChild(botao2);
+        botao2.setAttribute("onclick", "elementoPai.remove(); fechaModal();");
+    } else if (textoBotao2 != "") {
         let botao2 = document.createElement("button");
         botao2.setAttribute("id", "botao1");
         botao2.innerText = textoBotao2
