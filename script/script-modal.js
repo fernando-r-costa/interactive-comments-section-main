@@ -61,5 +61,7 @@ function abreModal() {
 }
 
 function fechaModal() {
-    document.querySelector(".modal").style.display = "none";
+    const modal = document.querySelector(".modal");
+    modal.remove();
+
 }

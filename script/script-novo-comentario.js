@@ -11,7 +11,7 @@ function mostraNovoComentario() {
     novoAvatar.classList.add("avatar-novo");
     novoTexto.classList.add("texto-novo");
     button.classList.add("button");
-    button.setAttribute("onclick", "insereNovoComentario()");
+    button.setAttribute("onclick", "textoBotao1 = ''; textoBotao2 = ''; textoBotao3 = ''; textoBotao4 = '';insereNovoComentario()");
 
     novoAvatar.innerHTML = `<img src="./images/avatars/image-${dados.currentUser.username}.png">`;
     novoTexto.innerHTML = "<textarea id='texto-novo' placeholder='Adicione um comentário...'></textarea>";
@@ -88,7 +88,7 @@ function insereNovoComentario() {
         avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
         avatar.innerHTML = `<img src="./images/avatars/image-${novoComment.user.username}.png">`;
         nomeUsuario.innerText = novoComment.user.username;
-        confirmaUsuario.innerText = "você";
+        confirmaUsuario.innerHTML = "<p>você</p>";
         tempoPost.innerText = novoComment.createdAt;
         apagar.innerText = "Apagar";
         comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";

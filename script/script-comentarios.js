@@ -43,7 +43,9 @@ function mostraComentarios(dados) {
         avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
         avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].user.username}.png">`;
         nomeUsuario.innerText = dados.comments[i].user.username;
-        confirmaUsuario.innerText = "você";
+        if(dados.comments[i].user.username == dados.currentUser.username) {
+            confirmaUsuario.innerHTML = "<p>você</p>";
+        }
         tempoPost.innerText = dados.comments[i].createdAt;
         apagar.innerText = "Apagar";
         comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
@@ -95,7 +97,9 @@ function mostraComentarios(dados) {
             avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
             avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].replies[j].user.username}.png">`;
             nomeUsuario.innerText = dados.comments[i].replies[j].user.username;
-            confirmaUsuario.innerText = "você";
+            if(dados.comments[i].replies[j].user.username == dados.currentUser.username) {
+                confirmaUsuario.innerHTML = "<p>você</p>";
+            }
             tempoPost.innerText = dados.comments[i].replies[j].createdAt;
             apagar.innerText = "Apagar";
             comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";

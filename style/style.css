@@ -98,14 +98,19 @@ header {
 
 .confirma-usuario {
     grid-area: 1 / 4 / 2 / 5;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.confirma-usuario p {
     background-color: hsl(228, 45%, 44%);
     font-size: 12px;
     color: hsl(223, 19%, 93%);
     font-weight: 500;
     margin: 10px 0 0 0;
+    padding: 2px;
+
 }
 
 .tempo-post {
