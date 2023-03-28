@@ -5,7 +5,7 @@ function mostraComentarios(dados) {
     let linkNovoComentario = document.createElement("div");
     linkNovoComentario.classList.add("link-novo-comentario");
     linkNovoComentario.setAttribute("onclick", "anexo = main; mostraNovoComentario()");
-    linkNovoComentario.innerHTML = "Inserir novo comentário";
+    linkNovoComentario.innerHTML = `<img src=${dados.currentUser.image.png} width = 5%><br>Inserir novo comentário`;
     main.appendChild(linkNovoComentario);
     
     
