@@ -126,7 +126,7 @@ header {
 
 .delete {
     grid-area: 1 / 6 / 2 / 7;
-    display: none;
+    display: flex;
     justify-content: right;
     align-items: center;
     font-size: 11px;

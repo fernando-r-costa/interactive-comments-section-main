@@ -46,7 +46,7 @@ Os usuários deverão ter a capacidade de:
 - [x] Interação-responder
 - [x] Interação-positivo-negativo
 - [x] Interação-usuario
-- [ ] Interação-editar
+- [x] Interação-editar
 - [ ] Interação-deletar
 
 ## Autor

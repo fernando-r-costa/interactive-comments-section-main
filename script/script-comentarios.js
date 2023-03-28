@@ -43,12 +43,15 @@ function mostraComentarios(dados) {
         avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
         avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].user.username}.png">`;
         nomeUsuario.innerText = dados.comments[i].user.username;
+        tempoPost.innerText = dados.comments[i].createdAt;
         if(dados.comments[i].user.username == dados.currentUser.username) {
             confirmaUsuario.innerHTML = "<p>você</p>";
+            apagar.innerHTML = "<p>Apagar</p>";
+            comandos.innerHTML = "<img src='./images/icon-edit.svg'>Editar";
+            comandos.setAttribute("onclick", "elementoVizinho = nextSibling; editarComentario()");
+        } else {
+            comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
         }
-        tempoPost.innerText = dados.comments[i].createdAt;
-        apagar.innerText = "Apagar";
-        comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
         texto.innerText = dados.comments[i].content;
         
         comentario.appendChild(avalPos);
@@ -99,10 +102,13 @@ function mostraComentarios(dados) {
             nomeUsuario.innerText = dados.comments[i].replies[j].user.username;
             if(dados.comments[i].replies[j].user.username == dados.currentUser.username) {
                 confirmaUsuario.innerHTML = "<p>você</p>";
+                apagar.innerHTML = "<p>Apagar</p>";
+                comandos.innerHTML = "<img src='./images/icon-edit.svg'>Editar";
+                comandos.setAttribute("onclick", "elementoVizinho = nextSibling; editarComentario()");
+            } else {
+                comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
             }
             tempoPost.innerText = dados.comments[i].replies[j].createdAt;
-            apagar.innerText = "Apagar";
-            comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
             texto.innerText = dados.comments[i].replies[j].content;
             
             comentario.appendChild(avalPos);

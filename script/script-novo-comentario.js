@@ -80,7 +80,7 @@ function insereNovoComentario() {
         tempoPost.classList.add("tempo-post");
         apagar.classList.add("delete");
         comandos.classList.add("comandos");
-        comandos.setAttribute("onclick", "anexo = parentNode; mostraNovoComentario()");
+        comandos.setAttribute("onclick", "elementoVizinho = nextSibling; editarComentario()");
         texto.classList.add("texto");
 
         avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
@@ -91,7 +91,7 @@ function insereNovoComentario() {
         confirmaUsuario.innerHTML = "<p>você</p>";
         tempoPost.innerText = novoComment.createdAt;
         apagar.innerText = "Apagar";
-        comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
+        comandos.innerHTML = "<img src='./images/icon-edit.svg'>Editar";
         texto.innerText = novoComment.content;
 
         comentario.appendChild(avalPos);
