@@ -4,7 +4,7 @@ let saldoAvaliacao = [];
 function mostraComentarios(dados) {
     let linkNovoComentario = document.createElement("div");
     linkNovoComentario.classList.add("link-novo-comentario");
-    linkNovoComentario.setAttribute("onclick", "mostraNovoComentario()");
+    linkNovoComentario.setAttribute("onclick", "anexo = main; mostraNovoComentario()");
     linkNovoComentario.innerHTML = "Inserir novo comentário";
     main.appendChild(linkNovoComentario);
     
@@ -25,9 +25,10 @@ function mostraComentarios(dados) {
         
         comentario.classList.add("comentario");
         avalPos.classList.add("aval-pos");
-        avalPos.setAttribute("onclick", "score = nextSibling; alteraScore()");
+        avalPos.setAttribute("onclick", "score = nextSibling; alteraScore(+1)");
         saldoAval.classList.add("saldo-aval");
         avalNeg.classList.add("aval-neg");
+        avalNeg.setAttribute("onclick", "score = previousSibling; alteraScore(-1)");
         avatar.classList.add("avatar");
         nomeUsuario.classList.add("nome-usuario");
         confirmaUsuario.classList.add("confirma-usuario");
@@ -76,9 +77,10 @@ function mostraComentarios(dados) {
             
             comentario.classList.add("resposta");
             avalPos.classList.add("aval-pos");
-            avalPos.setAttribute("onclick", "score = nextSibling; alteraScore()");
+            avalPos.setAttribute("onclick", "score = nextSibling; alteraScore(+1)");
             saldoAval.classList.add("saldo-aval");
             avalNeg.classList.add("aval-neg");
+            avalNeg.setAttribute("onclick", "score = previousSibling; alteraScore(-1)");
             avatar.classList.add("avatar");
             nomeUsuario.classList.add("nome-usuario");
             confirmaUsuario.classList.add("confirma-usuario");

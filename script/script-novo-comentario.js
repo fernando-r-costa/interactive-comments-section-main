@@ -48,7 +48,7 @@ function insereNovoComentario() {
         textoBotao2 = "";
         montaModal()
     } else {
-        let novoComment = new Comments(dados.comments.length + 1, `${textoNovoComentario.value}`, `Hoje`, 0, dados.currentUser, [])
+        let novoComment = new Comments(dados.comments.length + 1, `${textoNovoComentario.value}`, `Hoje`, `1`, dados.currentUser, [])
 
         dados.comments[dados.comments.length] = novoComment
 
@@ -70,8 +70,10 @@ function insereNovoComentario() {
             comentario.classList.add("resposta");
         }
         avalPos.classList.add("aval-pos");
+        avalPos.setAttribute("onclick", "score = nextSibling; alteraScore(+1)");
         saldoAval.classList.add("saldo-aval");
         avalNeg.classList.add("aval-neg");
+        avalNeg.setAttribute("onclick", "score = previousSibling; alteraScore(-1)");
         avatar.classList.add("avatar");
         nomeUsuario.classList.add("nome-usuario");
         confirmaUsuario.classList.add("confirma-usuario");

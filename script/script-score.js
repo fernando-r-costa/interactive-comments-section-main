@@ -1,7 +1,5 @@
 let score = "";
 
-function alteraScore() {
-    score.innerText = parseInt(score.innerText) + 1; 
+function alteraScore(valor) {
+    score.innerText = parseInt(score.innerText) + valor; 
 }
-
-// dados.comments[0].score
