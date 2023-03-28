@@ -136,4 +136,13 @@
         align-items: baseline;
         margin: 0 15px 0 0;
     }
+    .texto textarea {
+        margin-top: -10px;
+        height: 80px;
+        padding: 3px;
+    }
+    
+    .texto button {
+        margin: 15px 10px 25px 10px;
+    }
 }

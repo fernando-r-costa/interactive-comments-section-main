@@ -24,7 +24,7 @@ function montaModal() {
     textoModal.innerText = textoTextoModal;
     botao1.innerText = textoBotao1;
 
-    main.before(modal);
+    section.before(modal);
     modal.appendChild(modalConteudo);
     modalConteudo.appendChild(perguntaModal);
     modalConteudo.appendChild(botao1);
@@ -58,16 +58,9 @@ function montaModal() {
         modalConteudo.appendChild(botao4);
         botao4.setAttribute("onclick", "dados.currentUser = dados.users[3]; fechaModal(); mostraComentarios(dados);");
     }
-    abreModal();
-
-}
-
-function abreModal() {
-    document.querySelector(".modal").style.display = "block";
 }
 
 function fechaModal() {
     const modal = document.querySelector(".modal");
     modal.remove();
-
 }

@@ -19,12 +19,28 @@ Os usuários deverão ter a capacidade de:
 - Ver os estados de foco para todos os elementos interativos na página;
 - Criar, ler, atualizar e excluir comentários e respostas;
 - Comentários positivos e negativos;
-- **Bônus**: Se construir um projeto puramente front-end, usar `localStorage` para salvar o estado atual no navegador que persiste quando o navegador é atualizado.
-- **Bônus**: Em vez de usar as strings `createdAt` do arquivo `data.json`, tentar usar timestamps e rastrear dinamicamente o tempo desde que o comentário ou resposta foi postado.
 
 ### Screenshot
 
-![](./design/desktop-preview.jpg)
+![](./screenshots/Se%C3%A7%C3%A3o%20de%20coment%C3%A1rios%20interativo.png)
+
+![](./screenshots/screenshot-1680025383866.jpeg)
+
+![](./screenshots/screenshot-1680025405507.jpeg)
+
+![](./screenshots/screenshot-1680025412270.jpeg)
+
+![](./screenshots/screenshot-1680025426979.jpeg)
+
+![](./screenshots/screenshot-1680025434710.jpeg)
+
+![](./screenshots/screenshot-1680025439629.jpeg)
+
+![](./screenshots/screenshot-1680025446382.jpeg)
+
+![](./screenshots/screenshot-1680025468050.jpeg)
+
+![](./screenshots/screenshot-1680025719052.jpeg)
 
 ### Links
 
@@ -48,6 +64,7 @@ Os usuários deverão ter a capacidade de:
 - [x] Interação-usuario
 - [x] Interação-editar
 - [x] Interação-deletar
+- [x] Refatorar
 
 ## Autor
 

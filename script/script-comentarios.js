@@ -1,14 +1,13 @@
-let main = document.querySelector("main");
-let saldoAvaliacao = [];
+let section = document.querySelector("section");
 
 function mostraComentarios(dados) {
     let linkNovoComentario = document.createElement("div");
     linkNovoComentario.classList.add("link-novo-comentario");
-    linkNovoComentario.setAttribute("onclick", "anexo = main; mostraNovoComentario()");
+    linkNovoComentario.setAttribute("onclick", "anexo = section; mostraNovoComentario()");
     linkNovoComentario.innerHTML = `<img src=${dados.currentUser.image.png} width = 5%><br>Inserir novo comentário`;
-    main.appendChild(linkNovoComentario);
-    
-    
+    section.appendChild(linkNovoComentario);
+
+
     for (var i = 0; i < dados.comments.length; i++) {
         let comentario = document.createElement("div");
         let avalPos = document.createElement("div");
@@ -21,8 +20,7 @@ function mostraComentarios(dados) {
         let apagar = document.createElement("div");
         let comandos = document.createElement("div");
         let texto = document.createElement("div");
-        saldoAvaliacao[i] = dados.comments[i].score;        
-        
+
         comentario.classList.add("comentario");
         avalPos.classList.add("aval-pos");
         avalPos.setAttribute("onclick", "score = nextSibling; alteraScore(+1)");
@@ -37,14 +35,14 @@ function mostraComentarios(dados) {
         comandos.classList.add("comandos");
         comandos.setAttribute("onclick", "anexo = parentNode; mostraNovoComentario()");
         texto.classList.add("texto");
-        
+
         avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
-        saldoAval.innerText = saldoAvaliacao[i];
+        saldoAval.innerText = dados.comments[i].score;
         avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
         avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].user.username}.png">`;
         nomeUsuario.innerText = dados.comments[i].user.username;
         tempoPost.innerText = dados.comments[i].createdAt;
-        if(dados.comments[i].user.username == dados.currentUser.username) {
+        if (dados.comments[i].user.username == dados.currentUser.username) {
             confirmaUsuario.innerHTML = "<p>você</p>";
             apagar.innerHTML = "<p>Apagar</p>";
             apagar.setAttribute("onclick", "elementoPai = parentNode; apagar()")
@@ -54,7 +52,7 @@ function mostraComentarios(dados) {
             comandos.innerHTML = "<img src='./images/icon-reply.svg'>Resposta";
         }
         texto.innerText = dados.comments[i].content;
-        
+
         comentario.appendChild(avalPos);
         comentario.appendChild(saldoAval);
         comentario.appendChild(avalNeg);
@@ -65,9 +63,9 @@ function mostraComentarios(dados) {
         comentario.appendChild(apagar);
         comentario.appendChild(comandos);
         comentario.appendChild(texto);
-        
-        main.appendChild(comentario);
-        
+
+        section.appendChild(comentario);
+
         for (var j = 0; j < dados.comments[i].replies.length; j++) {
             let comentario = document.createElement("div");
             let avalPos = document.createElement("div");
@@ -80,7 +78,7 @@ function mostraComentarios(dados) {
             let apagar = document.createElement("div");
             let comandos = document.createElement("div");
             let texto = document.createElement("div");
-            
+
             comentario.classList.add("resposta");
             avalPos.classList.add("aval-pos");
             avalPos.setAttribute("onclick", "score = nextSibling; alteraScore(+1)");
@@ -96,13 +94,13 @@ function mostraComentarios(dados) {
             comandos.classList.add("comandos");
             comandos.setAttribute("onclick", "anexo = parentNode; mostraNovoComentario()");
             texto.classList.add("texto");
-            
+
             avalPos.innerHTML = "<img src='./images/icon-plus.svg'>";
             saldoAval.innerText = dados.comments[i].replies[j].score;
             avalNeg.innerHTML = "<img src='./images/icon-minus.svg'>";
             avatar.innerHTML = `<img src="./images/avatars/image-${dados.comments[i].replies[j].user.username}.png">`;
             nomeUsuario.innerText = dados.comments[i].replies[j].user.username;
-            if(dados.comments[i].replies[j].user.username == dados.currentUser.username) {
+            if (dados.comments[i].replies[j].user.username == dados.currentUser.username) {
                 confirmaUsuario.innerHTML = "<p>você</p>";
                 apagar.innerHTML = "<p>Apagar</p>";
                 comandos.innerHTML = "<img src='./images/icon-edit.svg'>Editar";
@@ -112,7 +110,7 @@ function mostraComentarios(dados) {
             }
             tempoPost.innerText = dados.comments[i].replies[j].createdAt;
             texto.innerText = dados.comments[i].replies[j].content;
-            
+
             comentario.appendChild(avalPos);
             comentario.appendChild(saldoAval);
             comentario.appendChild(avalNeg);
@@ -123,8 +121,8 @@ function mostraComentarios(dados) {
             comentario.appendChild(apagar);
             comentario.appendChild(comandos);
             comentario.appendChild(texto);
-            
-            main.appendChild(comentario);
+
+            section.appendChild(comentario);
         }
     }
 }

@@ -1,4 +1,4 @@
-let anexo = main;
+let anexo = section;
 
 function mostraNovoComentario() {
 
@@ -23,7 +23,7 @@ function mostraNovoComentario() {
 
     anexo.after(novoComentario);
     
-    if(anexo == main) {
+    if(anexo == section) {
         window.scrollBy({
            top: window.innerHeight,
            left: 0,
@@ -64,7 +64,7 @@ function insereNovoComentario() {
         let comandos = document.createElement("div");
         let texto = document.createElement("div");
 
-        if(anexo == main) {
+        if(anexo == section) {
             comentario.classList.add("comentario");
         } else {
             comentario.classList.add("resposta");
@@ -106,7 +106,7 @@ function insereNovoComentario() {
         comentario.appendChild(comandos);
         comentario.appendChild(texto);
 
-        if(anexo == main) {
+        if(anexo == section) {
             anexo.appendChild(comentario);
         } else {
             anexo.after(comentario);

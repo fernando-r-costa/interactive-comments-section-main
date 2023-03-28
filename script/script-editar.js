@@ -22,5 +22,4 @@ function apagar() {
     textoBotao3 = "";
     textoBotao4 = "";
     montaModal();
-    // elementoPai.remove();
 }
